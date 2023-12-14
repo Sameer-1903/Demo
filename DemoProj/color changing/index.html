@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: bisque;">
+    <h1 style="text-align: center;"> Colour Changing Machine </h1>
+    <p id="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quo nobis debitis deleniti ad eligendi, sapiente unde! Laboriosam beatae possimus repudiandae temporibus, delectus recusandae ipsam a repellat nesciunt ipsa nisi! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio cum cupiditate, eius totam inventore asperiores dolorum quibusdam tempora ducimus quae, quisquam odit deleniti recusandae minus fugit blanditiis, laudantium soluta praesentium. Esse, debitis totam veritatis voluptatum ipsa inventore aliquam iste enim?</p>
+    
+
+    <br>
+    <button id="changeColor" value="Change Colour" onclick="changeColor();" > Change Colour</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button id="stopColor" value="Stop Colour" onclick="stopColor();">Stop Colour</button>
+
+
+
+
+    <script>
+        
+        var i = 0;
+        function changeColor(){
+            var para = document.getElementById("para1");
+            var colors = ["blue", "yellow", "red", "green", "orange"];
+            para.style.color = colors[i];
+            i = (i + 1) % colors.length;
+        }
+
+        const myInterval = setInterval(changeColor,5000);
+
+        function stopColor(){
+            clearTimeout(myInterval)
+        }
+
+    </script>
+</body>
+</html>

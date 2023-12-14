@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+  
+</head>
+
+<body>
+    <h1>JS</h1>
+
+    <div id="emp-table"></div>
+
+    <input type="button" value="Generate Sum" onclick="fun();">
+    <input type="button" value="Generate Age" onclick="validateAge();">
+    <span id="span1"></span>
+    <script>
+
+        var allRecords = [
+            {Name:"Jojo" , Age:23 , City: "Delhi"},
+            {Name:"Popat Lal" , Age:24 , City: "Mumbai"},
+            {Name:"Santa Singh" , Age:25 , City: "Punjab"},
+            {Name:"Banta Singh" , Age:26 , City: "Pune"},
+        ]
+
+        var HTML = "<table border='1' width='100%' ><tr>";
+        allRecords.forEach((currObj)=>{
+            HTML+= "<td>" + currObj.Name + "</td>" + " <td>" + currObj.Age + "</td>" + "<td>" + currObj.City + "</td>" + "</tr>"
+            
+        })
+
+        HTML += "</tr></table>";
+        document.getElementById("emp-table").innerHTML = HTML;
+
+
+
+        function fun(){
+            // let x=20;
+            // let y=30;
+            // try{
+            //     let z=CalculateSum(x,y);
+            //     console.log(z);
+            // }
+            // catch(err){
+            //     console.log("error raised: "+ err);
+            // }
+
+            const timer=setTimeout(printMyMessage,10000);
+        }
+
+        function validateAge(){
+            let age=15;
+            if(age<18){
+                try{
+                    throw "Invalid age";
+                }catch(err){
+                    console.log("Age is validated");
+                }
+            }
+        }
+
+
+        function printMyMessage() {
+            let msg="Cybage Software Private Limited";
+            document.getElementById("span1").innerText=msg;
+        }
+
+    </script>
+</body>
+</html>

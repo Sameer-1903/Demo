@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate sum</title>
+    
+    <script src="index.js"></script>
+</head>
+<body>
+    <h1>Digital Calculator</h1>
+
+    <div>
+    <input type="text" id="textNumberBar" class="txtControl">
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <div >
+    <input type="button" value="1" 
+    id="btn1"  onclick="pressValue(document.getElementById('btn1').value)";
+    style="width: 50px; height:50px; ">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <input type="button" value="2" 
+    id="btn2"  onclick="pressValue(document.getElementById('btn2').value)";
+    style="width: 50px; height:50px; ">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <input type="button" value="3" 
+    id="btn3"  onclick="pressValue(document.getElementById('btn3').value)";
+    style="width: 50px; height:50px; ">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <input type="button" value="+"
+    id="op1" onclick="selectOperator(document.getElementById('op1').value);"
+    style="width: 50px; height:50px; ">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <br>
+    <br>
+    <br>
+    <input type="button" value="4" 
+    id="btn4"  onclick="pressValue(document.getElementById('btn4').value);"
+    style="width: 50px; height:50px; ">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <input type="button" value="5"
+    id="btn5"  onclick="pressValue(document.getElementById('btn5').value);"
+    style="width: 50px; height:50px; ">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <input type="button" value="6"
+    id="btn6"  onclick="pressValue(document.getElementById('btn6').value);"
+    style="width: 50px; height:50px; ">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <input type="button" value="-" 
+    id="op2" onclick="selectOperator(document.getElementById('op2').value);"
+    style="width: 50px; height:50px; ">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <br>
+    <br>
+    <br>
+    <input type="button" value="7" 
+    id="btn7"  onclick="pressValue(document.getElementById('btn7').value);"
+    style="width: 50px; height:50px; ">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <input type="button" value="8" 
+    id="btn8"  onclick="pressValue(document.getElementById('btn8').value);"
+    style="width: 50px; height:50px; ">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <input type="button" value="9" 
+    id="btn9"  onclick="pressValue(document.getElementById('btn9').value);"
+    style="width: 50px; height:50px; ">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <input type="button" value="*" 
+    id="op3" onclick="selectOperator(document.getElementById('op3').value);"
+    style="width: 50px; height:50px; ">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+    <br>
+    <br>
+    <br>
+    <input type="button" value="0" style="width: 50px; height:50px; ">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <input type="button" value="=" onclick="fetchResult();" style="width: 50px; height:50px; ">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <input type="button" value="/" 
+    id="op4" onclick="selectOperator(document.getElementById('op4').value);"
+    style="width: 50px; height:50px; ">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+</div>
+</body>
+</html>

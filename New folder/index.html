@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        class Person{
+            personName;
+            constructor(pname){
+                this.personName = pname;
+            }
+            displayPersonDetails(){
+                console.log(this.personName);
+                // return this.personName;
+            }
+        }
+
+        function fun() {
+            const pObject = new Person(document.getElementById("txtname").value);
+            // pObject = new Person(document.getElementById("lstname").value);
+
+            pObject.displayPersonDetails();
+
+            const pObject2 = new Person(document.getElementById("lstname").value);
+            pObject2.displayPersonDetails();
+
+        }
+
+        class employee extends Person{
+            lname;
+            constructor(fname, lname){
+                super(fname);
+                this.lname=lname;
+            }
+        }
+
+
+    </script>
+
+
+</head>
+<body>
+    <input type="text" placeholder="First Name" id="txtname">
+    <br>
+    <input type="text" placeholder="Last Name" id="lstname">
+    <br>
+    <input type="button" value="Display Content" onclick="fun();">
+</body>
+</html>

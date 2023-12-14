@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .myanimantion{
+            animation-name: temp;
+            animation-duration: 10s;
+            animation-delay: 1s;
+            
+            
+        }
+        
+        #container{
+            border: 2px solid black;
+            height: 300px;
+            width: 300px;
+            
+        }
+        @keyframes temp{
+            from{background-color: red;}
+            to{background-color: blue;}
+        }
+    </style>
+
+
+
+    <script>
+
+        function applyChanges(){
+            var colFrom = document.getElementById("fromCol").value;
+            var colTo = document.getElementById("toCol").value;
+            
+            
+            var styleSheetObject=document.styleSheets[0];
+            var cssRuleDetails = styleSheetObject.cssRules;
+
+            cssRuleDetails[2].deleteRule("from");
+            cssRuleDetails[2].appendRule("from {background-color:" +colFrom +";}");
+            cssRuleDetails[2].deleteRule("to");
+            cssRuleDetails[2].appendRule("to {background-color:" +colTo +";}");
+
+
+            console.log(colFrom);
+            console.log(colTo);
+            
+            var divref=document.getElementById("container");
+
+            //var result = document.getElementById("container").style.backgroundColor = colFrom;
+            // var result = document.getElementById("container").style.backgroundColor = colTo;
+            divref.className = "myanimantion" ;
+          
+        }
+
+
+    </script>
+
+
+
+
+
+</head>
+<body>
+    <h1>Welcome to Cybage</h1>
+
+    From <input type="color" id="fromCol">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+    To : <input type="color" id="toCol">
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <input type="button" value="Apply Changes" id="change" onclick="applyChanges();" >
+
+    <br>
+    <br>
+
+    <div id="container" >
+
+    </div>
+
+</body>
+</html>

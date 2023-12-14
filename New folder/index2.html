@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script>
+        class employee{
+            empname;
+            constructor(empname){
+                this.empname=empname;
+            }
+
+            showEmployeeDetails(){
+                return this.empname;
+            }
+        }
+
+        // class company{
+        //     companyname;
+        //     empObject;
+        //     constructor(empElement, companyname){
+        //         this.empObject=empElement;
+        //         this.companyname=companyname;
+        //     }
+        //     printCompanyDetails(){
+        //         var msg=this.empObject.showEmployeeDetails() + "works for" + this.companyname;
+        //         return msg;
+        //     }
+        // }
+
+
+        //employee.empdesignation="Programmar";
+
+        employee.prototype.empdesignation="Programmar";
+
+        const Fun=function(){
+            let empItem= new employee("Popat Lal ");
+            //let compItem= new company(empItem, " DemoSolutions");
+            let msg= empItem.empname + "works as a " +empItem.empdesignation;
+            console.log(msg);
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="Display" onclick="Fun();">
+</body>
+</html>
